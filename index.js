@@ -2,9 +2,7 @@ var http = require('http');
 var fs = require('fs');
 var extract = require('./extract');
 var mime = require('mime');
-
-/* exported wss */ // Not exported, but this runs the websocket server
-var wss = require('./websockets-server');
+var wssIgnored = require('./websockets-server');
 
 var handleError = function (err, res) {
   var errorFile = 'app/error.html';
